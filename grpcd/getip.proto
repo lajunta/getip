@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package grpcd;
+
+option go_package = "github.com/lajunta/getip/grpcd";
+
+service GetIPService {
+    rpc GetIP(IPRequest) returns (IPReply) {}    
+}
+
+message IPRequest{
+    string Room = 1;
+    string Mac = 2; 
+}
+
+message IPReply{
+    string Mac = 1; 
+    string Name = 2; 
+    string WorkGroup = 3; 
+    string IP = 4; 
+    string NetMask = 5; 
+    string GateWay = 6; 
+    string DNS = 7;
+}
