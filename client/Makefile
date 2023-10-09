@@ -1,5 +1,5 @@
 win:
 	rsrc -manifest getip.manifest -o getip.syso
-	go build -ldflags="-w -s" -o getip.exe
+	go build -ldflags="-w -s" -o bin\getip.exe
 	del getip.syso
-	upx getip.exe
+	upx bin\getip.exe
